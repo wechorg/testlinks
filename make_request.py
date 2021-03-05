@@ -2,6 +2,8 @@ import requests
 
 
 """
+sample failing links
+
 2021-02-24T17:37:27.8831304Z Link 'https://github.com/ripple/rippled/pull/2013' in page out/2017/rippled-0.60.0.html is still down.
 2021-02-24T17:37:27.8833005Z Testing remote link 'https://github.com/ripple/rippled/pull/1983'
 2021-02-24T17:37:27.8834278Z ... Broken remote link in out/2017/rippled-0.60.0.html to 'https://github.com/ripple/rippled/pull/1983'
@@ -38,9 +40,8 @@ import requests
 sample_links = ['https://github.com/ripple/rippled/pull/1983',
                 'https://github.com/ripple/rippled/pull/1995', 'https://github.com/ripple/rippled/pull/1997', 'https://github.com/ripple/rippled/pull/2532/commits/2ac1c2b433b8825b9a6f203f1ee65a126e20620c', 'https://github.com/ripple/rippled/pull/2650/commits/04745b11a888cea412f410d0036a0db23574d61c', 'https://github.com/ripple/rippled/pull/2532/commits/7d163a45dcd2c5cca0fc45eb8775f169575995c1', 'https://github.com/ripple/rippled/pull/2566/commits/34d3f93868b87f33fdf76a5b6c8b376956346a16', 'https://github.com/ripple/rippled/pull/2586/commits/5b733fb4857ff1076d2e106afeb9931fca198d51']
 
-
 for link in sample_links:
     github_request = requests.get(link)
     if github_request.status_code != 200:
         raise requests.RequestException
-    print(github_request.status_code)
+    print(f'{github_request.status_code} - {link}')
