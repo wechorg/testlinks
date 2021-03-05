@@ -35,7 +35,7 @@ import requests
 
 """
 
-sample_links = ['https://github.com/ripp9le/rippled/pull/1983',
+sample_links = ['https://github.com/ripple/rippled/pull/1983',
                 'https://github.com/ripple/rippled/pull/1995', 'https://github.com/ripple/rippled/pull/1997', 'https://github.com/ripple/rippled/pull/2532/commits/2ac1c2b433b8825b9a6f203f1ee65a126e20620c', 'https://github.com/ripple/rippled/pull/2650/commits/04745b11a888cea412f410d0036a0db23574d61c', 'https://github.com/ripple/rippled/pull/2532/commits/7d163a45dcd2c5cca0fc45eb8775f169575995c1', 'https://github.com/ripple/rippled/pull/2566/commits/34d3f93868b87f33fdf76a5b6c8b376956346a16', 'https://github.com/ripple/rippled/pull/2586/commits/5b733fb4857ff1076d2e106afeb9931fca198d51']
 
 
