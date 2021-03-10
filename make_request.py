@@ -38,9 +38,10 @@ sample_links = ['https://github.com/ripple/rippled/pull/1983',
 
 for link in sample_links:
     for i in range(2000):
-        sleep(5)
+        # sleep(5)
         github_request = requests.get(link)
         if github_request.status_code != 200:
+            print(github_request.headers)
             print("Ooops an error occured, code= ", github_request.status_code)
             raise requests.RequestException
 
