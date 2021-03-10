@@ -39,6 +39,7 @@ for link in sample_links:
     for i in range(2000):
         github_request = requests.get(link)
         if github_request.status_code != 200:
+            print("Ooops an error occured, code= ", github_request.status_code)
             raise requests.RequestException
 
 print(f'completed without any error')
