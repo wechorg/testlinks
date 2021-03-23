@@ -38,7 +38,7 @@ sample_links = ['https://github.com/ripple/rippled/pull/1983',
 
 for link in sample_links:
     for i in range(2000):
-        sleep(1.5)
+        sleep(1.8)
         github_request = requests.get(link)
         if github_request.status_code != 200:
             print(github_request.headers)
